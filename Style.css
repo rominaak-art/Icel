@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazir', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a0f;
+    color: #e0d6c8;
+    line-height: 1.8;
+    min-height: 100vh;
+}
+
+/* Tarot Background - The Fool Card */
+.tarot-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        radial-gradient(ellipse at 20% 50%, rgba(88, 44, 22, 0.3) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(44, 22, 88, 0.3) 0%, transparent 60%),
+        linear-gradient(180deg, #0a0a0f 0%, #1a0e0a 50%, #0a0a0f 100%);
+    opacity: 0.9;
+}
+
+/* Fool Card Pattern Overlay */
+.tarot-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M20 80 L30 70 L40 80 L50 60 L60 80 L70 70 L80 80 L90 60 L80 50 L70 60 L60 50 L50 70 L40 50 L30 60 L20 50 L10 60 L20 80Z' fill='rgba(218,165,32,0.05)'/%3E%3C/svg%3E");
+    opacity: 0.3;
+}
+
+/* Fool Card Silhouette */
+.tarot-bg::after {
+    content: '🃏';
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    font-size: 15rem;
+    opacity: 0.04;
+    transform: rotate(-15deg);
+}
+
+header {
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(218, 165, 32, 0.15);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #daa520;
+    text-shadow: 0 0 20px rgba(218, 165, 32, 0.2);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: #e0d6c8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    color: #daa520;
+    text-shadow: 0 0 20px rgba(218, 165, 32, 0.3);
+}
+
+section {
+    padding: 6rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #daa520;
+    text-shadow: 0 0 40px rgba(218, 165, 32, 0.2);
+    margin-bottom: 1.5rem;
+}
+
+.disclaimer {
+    font-size: 1.2rem;
+    color: #c4b5a5;
+    background: rgba(218, 165, 32, 0.05);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(218, 165, 32, 0.1);
+    margin-bottom: 2.5rem;
+    line-height: 2.2;
+}
+
+/* Tarot Box - Request Form */
+.tarot-box {
+    background: rgba(20, 15, 20, 0.9);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(218, 165, 32, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(218, 165, 32, 0.1);
+}
+
+.tarot-box h2 {
+    color: #daa520;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input, textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(218, 165, 32, 0.15);
+    border-radius: 12px;
+    padding: 1rem;
+    color: #e0d6c8;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #daa520;
+    box-shadow: 0 0 20px rgba(218, 165, 32, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    background: linear-gradient(135deg, #daa520, #b8860b);
+    color: #0a0a0f;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(218, 165, 32, 0.3);
+}
+
+#formMessage {
+    margin-top: 1rem;
+    color: #daa520;
+    font-size: 0.95rem;
+}
+
+/* Blog Section */
+#blog h2 {
+    color: #daa520;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.blog-card {
+    background: rgba(20, 15, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(218, 165, 32, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(218, 165, 32, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.blog-card h3 {
+    color: #daa520;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card .date {
+    color: #8a7a6a;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.blog-card p {
+    color: #c4b5a5;
+    margin-bottom: 1rem;
+}
+
+.blog-card a {
+    color: #daa520;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.blog-card a:hover {
+    color: #f0d060;
+}
+
+/* Requests Section */
+#requests h2 {
+    color: #daa520;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#requestsList {
+    background: rgba(20, 15, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(218, 165, 32, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    min-height: 200px;
+}
+
+.request-item {
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(218, 165, 32, 0.08);
+    padding: 1.5rem 0;
+}
+
+.request-item:last-child {
+    border-bottom: none;
+}
+
+.request-item .req-name {
+    color: #daa520;
+    font-weight: bold;
+}
+
+.request-item .req-date {
+    color: #8a7a6a;
+    font-size: 0.85rem;
+}
+
+.request-item .req-question {
+    color: #e0d6c8;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.request-item .req-reply {
+    margin-top: 0.8rem;
+}
+
+.request-item .req-reply textarea {
+    width: 100%;
+    min-height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.request-item .req-reply button {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* About Section */
+#about h2 {
+    color: #daa520;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    background: rgba(20, 15, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(218, 165, 32, 0.1);
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    color: #c4b5a5;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.about-content strong {
+    color: #daa520;
+}
+
+/* Footer */
+footer {
+    background: rgba(10, 10, 15, 0.95);
+    border-top: 1px solid rgba(218, 165, 32, 0.1);
+    text-align: center;
+    padding: 2rem;
+    color: #8a7a6a;
+    font-size: 0.9rem;
+}
+
+/* Loading State */
+.loading {
+    color: #8a7a6a;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .disclaimer {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    .tarot-box {
+        padding: 1.5rem;
+    }
+    
+    section {
+        padding: 5rem 1rem 3rem;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    nav ul {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
