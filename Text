@@ -1,0 +1,38 @@
+
+## 🔧 How It Works
+1. Users submit a tarot reading request via the form
+2. Requests appear in the "درخواست‌های دریافتی" section
+3. Admin can reply to each request directly from the page
+4. All data is stored in browser's localStorage
+
+## 📝 Admin Instructions
+- Scroll to **"درخواست‌های دریافتی"** section
+- Each un-replied request has a textarea and "ارسال پاسخ" button
+- Type your reply and click the button
+- Reply will be saved and displayed immediately
+
+## 🛠️ Customization
+- Change `background` in `.tarot-bg` for different tarot cards
+- Modify colors in `style.css` (search for `#daa520` - gold theme)
+- Add blog posts in `#blog` section of `index.html`
+
+## 🔒 Privacy Note
+All data is stored locally in your browser's localStorage.
+To make it server-persistent, connect a backend API.
+
+## 📦 Deploy to GitHub
+1. Create a GitHub repository
+2. Upload all files
+3. Go to Settings > Pages
+4. Select "main" branch as source
+5. Your site will be live at: `https://[username].github.io/[repo-name]`
+
+## 📄 License
+MIT - Free to use and modify.
+
+## 🤝 Contributing
+Feel free to fork and improve! Open an issue for bugs or suggestions.
+
+---
+
+**Made with 🔮 and ❤️**
