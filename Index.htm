@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eyeless - فال تاروت</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Background overlay for The Fool card -->
+    <div class="tarot-bg"></div>
+
+    <header>
+        <nav>
+            <div class="logo">👁️ Eyeless</div>
+            <ul>
+                <li><a href="#home">خانه</a></li>
+                <li><a href="#blog">وبلاگ</a></li>
+                <li><a href="#requests">درخواست‌ها</a></li>
+                <li><a href="#about">درباره</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section with Tarot Request Box -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>🔮 Eyeless</h1>
+            <p class="disclaimer">
+                این سایت یک نسخه آزمایشی است.<br />
+                تمام فال‌ها کاملا رایگان هستند و میتوانید با سوال یا درخواست درونیتان 
+                یک فال و تفسیر آن را دریافت کنید. ✨
+            </p>
+
+            <!-- Tarot Request Form -->
+            <div class="tarot-box">
+                <h2>✉️ درخواست فال</h2>
+                <form id="tarotForm">
+                    <input type="text" id="name" placeholder="نام شما (اختیاری)" />
+                    <input type="email" id="email" placeholder="ایمیل (برای پاسخ)" required />
+                    <textarea id="question" placeholder="سوال یا درخواست خود را بنویسید..." required></textarea>
+                    <button type="submit">ارسال درخواست 🌙</button>
+                </form>
+                <div id="formMessage"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>📜 وبلاگ تاروت</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <h3>معنی کارت The Fool</h3>
+                <p class="date">۱۸ تیر ۱۴۰۵</p>
+                <p>کارت احمق نماد شروع یک سفر جدید، بی‌گناهی و اعتماد به جهان است...</p>
+                <a href="#">بیشتر بخوانید →</a>
+            </article>
+            <article class="blog-card">
+                <h3>چگونه سوال درست بپرسیم؟</h3>
+                <p class="date">۱۲ تیر ۱۴۰۵</p>
+                <p>برای دریافت بهترین پاسخ از تاروت، سوالات خود را باز و شفاف مطرح کنید...</p>
+                <a href="#">بیشتر بخوانید →</a>
+            </article>
+            <article class="blog-card">
+                <h3>تفسیر کارت‌های بزرگ</h3>
+                <p class="date">۵ تیر ۱۴۰۵</p>
+                <p>آرکانای بزرگ شامل ۲۲ کارت اصلی هستند که هر کدام پیام عمیقی دارند...</p>
+                <a href="#">بیشتر بخوانید →</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Requests Management (Admin View) -->
+    <section id="requests">
+        <h2>📋 درخواست‌های دریافتی</h2>
+        <div id="requestsList">
+            <p class="loading">در حال بارگذاری...</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>👤 درباره Eyeless</h2>
+        <div class="about-content">
+            <p>
+                Eyeless یک پلتفرم برای ارتباط با دنیای تاروت و دریافت راهنمایی‌های معنوی است.
+                تمامی خدمات ما رایگان و با هدف کمک به رشد درونی شما ارائه می‌شوند.
+            </p>
+            <p>
+                🔮 <strong>چرا رایگان؟</strong><br />
+                زیرا معتقدیم پیام‌های تاروت باید در دسترس همه باشد.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>👁️ Eyeless &copy; ۲۰۲۶ - تمام حقوق محفوظ است</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
